@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1" id="result">Intermediate 1</h1>
+	<input type="submit" name="check the first hotel"  onclick="hotel1.checkAvailability();">
+    <input type="submit" name="check the second hotel"  onclick="hotel2.checkAvailability();">
+    <input type="submit" name="check the third hotel" onclick="hotel3.checkAvailability();">
+	<script type="text/javascript">
+	
+
+class Hotel {
+
+   constructor(name,rooms,booked,gym,how){
+	this.name = name;
+	this.rooms = rooms;
+	this.booked = booked; 
+	this.gym = gym;
+	this.wantednight=how;}
+
+
+
+	checkAvailability() {
+
+      var avnight =this.rooms - this.booked;
+      console.log(avnight,this.booked)
+       if(avnight > this.wantednight ){
+        
+        document.getElementById("result").innerHTML = "There are available nights";
+       } 
+       else {
+        document.getElementById("result").innerHTML = "There isn'nt any available night";
+        }
+
+}
+}
+var howMany = parseInt(prompt("How many nights?"));
+
+book1 = Math.floor(Math.random()* 100);
+book2 = Math.random()* 100;
+book3 = Math.random()* 100;
+console.log(book1);
+
+var hotel1 = new Hotel('california',100,book1,false,howMany);
+console.log(hotel1)
+var hotel2= new Hotel('heartbreak',100,book2,false,howMany);
+var hotel3 = new Hotel('sportsInn',100,book3,true,howMany);
+
+
+
+
+
+	</script>
+		
+</body>
+</html>

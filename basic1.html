@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1 id="age1">Basic 1</h1>
+	
+	<input type="submit" name="" onclick="dateYou.getAge()">
+	<script type="text/javascript">
+
+	 var dateYou = new Object()
+		
+		
+		var c= new Date;
+		currentyear= c.getFullYear();
+
+
+		var yy= prompt("enter your fucking birth year");
+
+		dateYou.getAge= function (){
+		
+	
+		age =currentyear- parseInt(yy);
+
+		document.getElementById("age1").innerHTML=age;
+		}
+	
+		
+
+
+
+
+
+
+
+
+
+
+	</script>
+		
+</body>
+</html>
